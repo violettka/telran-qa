@@ -11,6 +11,7 @@ public class CheckboxPage extends Page {
     public CheckboxPage(WebDriver driver) {
         super(driver);
     }
+
     /*
         @FindBy(css = "input:nth-child(1)")
         WebElement checkbox1;

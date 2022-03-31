@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
 
-public class Checkbox extends BaseTest {
+public class CheckboxTest extends BaseTest {
 
     @Test
     public void checkbox1Click() { // оба выбраны
@@ -21,7 +21,7 @@ public class Checkbox extends BaseTest {
         int checkboxIndex = 1;
         checkboxPage = homePage.goToCheckboxPage(); // driver.findElement(By.linkText("Checkboxes")).click();
         checkboxPage.clickOnCheckbox(checkboxIndex); // driver.findElement(By.cssSelector("input:nth-child(3)")).click();
-        assert(!checkboxPage.isCheckboxNotSelected(checkboxIndex));
+        assert (!checkboxPage.isCheckboxNotSelected(checkboxIndex));
     }
 
     @Test
@@ -29,8 +29,8 @@ public class Checkbox extends BaseTest {
         checkboxPage = homePage.goToCheckboxPage(); // driver.findElement(By.linkText("Checkboxes")).click();
         checkboxPage.clickOnCheckbox(0); // driver.findElement(By.cssSelector("input:nth-child(1)")).click();
         checkboxPage.clickOnCheckbox(1); // driver.findElement(By.cssSelector("input:nth-child(3)")).click();
-        assert(checkboxPage.isCheckboxNotSelected(0));
-        assert(!checkboxPage.isCheckboxNotSelected(1));
+        assert (checkboxPage.isCheckboxNotSelected(0));
+        assert (!checkboxPage.isCheckboxNotSelected(1));
     }
 
     @Test
@@ -39,7 +39,7 @@ public class Checkbox extends BaseTest {
         checkboxPage = homePage.goToCheckboxPage(); // driver.findElement(By.linkText("Checkboxes")).click();
         checkboxPage.clickOnCheckbox(checkboxIndex); // driver.findElement(By.cssSelector("input:nth-child(1)")).click();
         checkboxPage.clickOnCheckbox(checkboxIndex); // driver.findElement(By.cssSelector("input:nth-child(1)")).click();
-        assert(!checkboxPage.isCheckboxNotSelected(checkboxIndex));
+        assert (!checkboxPage.isCheckboxNotSelected(checkboxIndex));
     }
 
     @Test
