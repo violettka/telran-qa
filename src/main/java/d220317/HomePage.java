@@ -20,6 +20,9 @@ public class HomePage extends Page { // PageFactory
     @FindBy(linkText = "Add/Remove Elements")
     WebElement addRemoveElt;
 
+    @FindBy(linkText = "Checkboxes")
+    WebElement checkbox;
+
     public LoginPage goToLoginPage() { // метод, который кликает на элемент
         authenticationText.click();
         return new LoginPage(driver);
@@ -28,6 +31,11 @@ public class HomePage extends Page { // PageFactory
     public AddRemovePage goToAddRemovePage() {
         addRemoveElt.click();
         return new AddRemovePage(driver);
+    }
+
+    public CheckboxPage goToCheckboxPage() {
+        checkbox.click();
+        return new CheckboxPage(driver);
     }
 }
 

@@ -18,6 +18,7 @@ public class BaseTest {
     HomePage homePage;
     LoginPage loginPage; // передаётся всегда, но инициализация не тут
     AddRemovePage addRemovePage;
+    CheckboxPage checkboxPage;
     SecurePage securePage;
     WebDriver driver;
     Map<String, Object> vars;
