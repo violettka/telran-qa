@@ -1,5 +1,6 @@
 package d220407.sconto;
 
+import d220407.sconto.util.PropertiesLoader;
 import org.openqa.selenium.By;
 
 import java.security.PublicKey;
@@ -7,7 +8,12 @@ import java.security.PublicKey;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 
-public class LoginPage {
+public class LoginPage extends HeaderMenu{
+
+    /* Properties */
+    public static String validEmail = PropertiesLoader.loadProperty("valid.email");
+    public static String validPwd = PropertiesLoader.loadProperty("valid.password");
+
 
     private static final By emailField = By.id("loginEmail");
     private static final By passField = By.id("loginPassword");
@@ -18,8 +24,8 @@ public class LoginPage {
         $(passField).setValue(pass);
     }
 
-    public HeaderMenu clickOnLoginBtn() {
+    public HomePage clickOnLoginBtn() {
         $(loginButton).click();
-        return page(HeaderMenu.class);
+        return page(HomePage.class);
     }
 }

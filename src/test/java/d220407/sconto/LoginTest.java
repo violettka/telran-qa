@@ -3,26 +3,28 @@ package d220407.sconto;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.open;
+import static d220407.sconto.HomePage.basicURL;
+import static d220407.sconto.LoginPage.validEmail;
+import static d220407.sconto.LoginPage.validPwd;
 
-public class LoginTest {
+public class LoginTest extends HeaderMenu{
 
     HomePage homePage; // эту часть мы выносим для упрощения написания других тестов
-    HeaderMenu headerMenu;
     LoginPage loginPage;
     KontoPage kontoPage;
 
     @Test
     public void LoginLogoutTest() {
-        headerMenu = open("https://www.sconto.de/", HeaderMenu.class);
-        // удаляем всплывающее окно
-        loginPage = headerMenu.clickOnLoginIcon();
-        loginPage.fillCred("abramova.violetta@gmail.com", "GetS0meSconto!");
-        headerMenu = loginPage.clickOnLoginBtn(); // мы фиксируем изменения
-        headerMenu.checkIconText("Mein Konto");
-        kontoPage = headerMenu.clickMyKontoIcon();
+        homePage = open(basicURL, HomePage.class);
+        homePage.clickAcceptCookies(); // теперь не будет всплывающего окна
+        loginPage = homePage.clickLoginBtn(LoginPage.class);
+        loginPage.fillCred(validEmail, validPwd);
+        homePage = loginPage.clickOnLoginBtn(); // мы фиксируем изменения
+        homePage.checkIconText(kontoText);
+        kontoPage = homePage.clickLoginBtn(KontoPage.class);
         kontoPage.checkGreetingsText();
-        headerMenu = kontoPage.clickOnLogout(); // и тут мы поняли, что что-то нужно менять
-        headerMenu.checkIconText("Anmelden");
+        loginPage = kontoPage.clickOnLogout(); // и тут мы поняли, что что-то нужно менять
+        loginPage.checkIconText(anmeldenText);
     }
 }
 /*

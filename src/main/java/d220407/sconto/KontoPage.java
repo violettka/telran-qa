@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 
-public class KontoPage {
+public class KontoPage extends HeaderMenu{
 
 private static final By logout = By.xpath("//a[contains(@href, '/bestellung/logout')]");
 
@@ -16,8 +16,8 @@ private static final By logout = By.xpath("//a[contains(@href, '/bestellung/logo
         $(greeting).shouldHave(Condition.text("Willkommen in Ihrem Kundenkonto.")); // https://selenide.org/documentation.html
     }
 
-    public HeaderMenu clickOnLogout() {
+    public LoginPage clickOnLogout() {
         $(logout).click();
-        return page(HeaderMenu.class);
+        return page(LoginPage.class);
     }
 }
