@@ -35,4 +35,9 @@ public class CustomerAccountSteps {
     public void iAmLoggedIn() {
         shouldBeLoggedIn();
     }
+
+    @When("I click on Ihre Wunschliste")
+    public void clickOnWishlist() {
+        customerAccountPage.clickOnWishlistInKundenkontoMenu();
+    }
 }
