@@ -3,9 +3,9 @@ Feature: Customer Account Wishlist page Tests
   # Homework
     Scenario: Customer Account Wishlist displays list of items
         Given I am logged in
-        And I see Home page
+        And I am on the Homepage
 
-        When I click on Sofas
+        When I click on Sofa
         Then I see Sofas page
 
         When I click on Wishlist icon of the product
@@ -19,9 +19,9 @@ Feature: Customer Account Wishlist page Tests
 
     Scenario: Customer Account Wishlist displays list of items
         Given I am logged in
-        And I see Home page
+        And I am on the Homepage
 
-        When I click on Sofas
+        When I click on Sofa
         Then I see Sofas page
 
         When I click on Wishlist icon of the product
