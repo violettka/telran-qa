@@ -1,4 +1,4 @@
-package d220407.sconto;
+package selenide.sconto;
 
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;

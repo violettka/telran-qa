@@ -1,11 +1,12 @@
-package d220407.sconto;
+package selenide.sconto;
 
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.open;
-import static d220407.sconto.HomePage.basicURL;
-import static d220407.sconto.LoginPage.validEmail;
-import static d220407.sconto.LoginPage.validPwd;
+import static selenide.sconto.HomePage.basicURL;
+import static selenide.sconto.LoginPage.validEmail;
+import static selenide.sconto.LoginPage.validPwd;
+
 
 public class LoginTest extends HeaderMenu{
 

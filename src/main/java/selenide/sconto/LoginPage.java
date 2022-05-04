@@ -1,7 +1,7 @@
-package d220407.sconto;
+package selenide.sconto;
 
-import d220407.sconto.util.PropertiesLoader;
 import org.openqa.selenium.By;
+import selenide.sconto.util.PropertiesLoader;
 
 import java.security.PublicKey;
 
