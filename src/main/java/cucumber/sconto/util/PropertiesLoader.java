@@ -1,4 +1,4 @@
-package d220407.sconto.util;
+package cucumber.sconto.util;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -8,8 +8,9 @@ import java.util.Properties;
  *
  * @author Sebastiano Armeli-Battana
  */
-public class PropertiesLoader {  // класс, который позволяет выгружать данные
-    private static final String PROP_FILE = "/sconto_test.properties";
+public class PropertiesLoader {
+
+    private static final String PROP_FILE = "/test.properties";
 
     private PropertiesLoader() {
     }

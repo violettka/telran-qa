@@ -20,7 +20,7 @@ public class LoginTest extends HeaderMenu{
         loginPage = homePage.clickLoginBtn(LoginPage.class);
         loginPage.fillCred(validEmail, validPwd);
         homePage = loginPage.clickOnLoginBtn(); // мы фиксируем изменения
-        homePage.checkIconText(kontoText);
+        homePage.checkIconText(kontoText); // мы проверяем изменение текста иконки
         kontoPage = homePage.clickLoginBtn(KontoPage.class);
         kontoPage.checkGreetingsText();
         loginPage = kontoPage.clickOnLogout(); // и тут мы поняли, что что-то нужно менять
