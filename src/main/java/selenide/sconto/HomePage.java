@@ -1,9 +1,9 @@
-package d220407.sconto;
+package selenide.sconto;
 
 import com.codeborne.selenide.Condition;
-import d220407.sconto.util.PropertiesLoader;
 import org.checkerframework.checker.index.qual.UpperBoundUnknown;
 import org.openqa.selenium.By;
+import selenide.sconto.util.PropertiesLoader;
 
 import static com.codeborne.selenide.Selenide.*;
 

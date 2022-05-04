@@ -1,4 +1,4 @@
-package d220331.selenide;
+package selenide;
 
 import org.junit.Before;
 import org.openqa.selenium.JavascriptExecutor;

@@ -1,4 +1,4 @@
-package d220407.sconto.util;
+package selenide.sconto.util;
 
 import java.io.IOException;
 import java.util.Properties;
