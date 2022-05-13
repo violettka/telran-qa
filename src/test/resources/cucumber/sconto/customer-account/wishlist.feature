@@ -1,15 +1,15 @@
 Feature: Customer Account Wishlist page Tests
 
-    Scenario: Customer Account Wishlist displays list of items
+    Scenario Outline: Customer Account Wishlist displays list of items
         Given I am on Customer Account Page
         When I click on Ihre Wunschliste
         Then I see empty Wishlist
 
-        When I click on Sofa
-        Then I see Sofas page
+        When I click on <menu> menu
+        Then I see <menu> page
 
-        When I click on Wishlist icon of the product
-        Then I see Wishlist icon is activated
+        When I add <itemAmount> item to Wishlist
+        Then I see Wishlist icon is activated for <itemAmount> item
         And I see added item in Merkliste
 
         When I click on the Login icon
@@ -20,8 +20,8 @@ Feature: Customer Account Wishlist page Tests
 
   # Homework  + новый сценарий
 
-#        When I remove the item
-#        Then I make sure item is removed
+#        When I remove the <itemAmount> items
+#        Then I see empty Wishlist
 #
 #    Scenario: Customer Account Wishlist displays list of items
 #        Given I am logged in

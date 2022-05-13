@@ -43,6 +43,7 @@ public class CustomerAccountSteps {
         Helper.acceptCookies();
         loginPage.validLoginInput();
         homePage = loginPage.clickLoginBtn();
+        homePage.checkIconText("Mein Konto");
         customerAccountPage = homePage.clickLoginIcon(CustomerAccountP.class);
         shouldBeLoggedIn();
     }
